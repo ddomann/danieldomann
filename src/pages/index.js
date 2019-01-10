@@ -9,7 +9,7 @@ import Contactform from '../components/form'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={['daniel domann', 'band', 'kc', 'kansas city' ]} />
+    <SEO title="Home" keywords={['daniel domann', 'developer', 'kc', 'kansas city' ]} />
     <div>
     <section className="banner">
     <div className="background"></div>
