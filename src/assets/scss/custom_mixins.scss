@@ -1,0 +1,237 @@
+/* Mixins
+--------------------------------------------------------------- */
+
+
+@mixin icon($height, $width) {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: $height;
+    width: $width;
+    top: ($navbar_height / 2) - 1;
+    background-color: $light;
+}
+
+@mixin icon-before($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $light;
+    content: "";
+    top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $light;
+    content: "";
+    top: $top;
+}
+
+// Adds REM size with px fallback
+@mixin font-size($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateEm($size);
+}
+
+
+
+@mixin clearfix() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin hide-text {
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin transition($effect...) {
+    -ms-transition: $effect;
+    -webkit-transition: $effect;
+    -moz-transition: $effect;
+    -o-transition: $effect;
+    transition: $effect;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@mixin scroll_transition {
+    -ms-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@mixin transform($effect...) {
+    -moz-transform: $effect;
+    -ms-transform: $effect;
+    -o-transform: $effect;
+    -webkit-transform: $effect;
+    transform: $effect;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+}
+
+
+@mixin aspect_ratio_section($width, $height) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .aspect_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@mixin background {
+    -webkit-backface-visibility: hidden;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: center center;
+    background-size: cover;
+    display: block;
+}
+
+@mixin absolute-cover {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@mixin background-blur($size) {
+    -webkit-filter: blur($size);
+    -moz-filter: blur($size);
+    -o-filter: blur($size);
+    -ms-filter: blur($size);
+    filter: blur($size);
+}
+
+@mixin background-fix {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(md) {
+        background-attachment: scroll;
+    }
+}
+
+@mixin background-cover {
+    background-position: center center;
+    background-size: cover;
+}
+
+@mixin hover_transition {
+    -ms-transition: all .3s cubic-bezier(.19,1,.22,1) 50ms;
+    -moz-transition: all .3s cubic-bezier(.19,1,.22,1) 50ms;
+    -o-transition: all .3s cubic-bezier(.19,1,.22,1) 50ms;
+    -webkit-transition: all .3s cubic-bezier(.19,1,.22,1) 50ms;
+    transition: all .3s cubic-bezier(.19,1,.22,1) 50ms;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@mixin absolute_middle {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    width: auto;
+}
+
+@mixin middle_v {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+@mixin middle_h {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@mixin greyscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@function range-progress($color, $dist, $offset) {
+    $val: -#{$dist} 0 0 -#{$offset} $color;
+
+    @for $i from 1 through 150 {
+        $val: #{$val}, #{-$dist - (($dist - $offset) * $i)} 0 0 -#{$offset} #{$color};
+    }
+
+    @return $val;
+}
+
+@function calculateEm($size) {
+    $emSize: $size / 16px;
+    @return #{$emSize}em;
+}

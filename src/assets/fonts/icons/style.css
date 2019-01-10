@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'icomontage';
+  src:  url('fonts/icomontage.eot?kudaps');
+  src:  url('fonts/icomontage.eot?kudaps#iefix') format('embedded-opentype'),
+    url('fonts/icomontage.ttf?kudaps') format('truetype'),
+    url('fonts/icomontage.woff?kudaps') format('woff'),
+    url('fonts/icomontage.svg?kudaps#icomontage') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomontage' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youtube:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\e901";
+}

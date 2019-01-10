@@ -1,0 +1,70 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+// Colors
+
+$primary: #005369;
+$brand-primary: #005369;
+$brand-primary-rgba: rgba(62, 190, 183, 1);
+$body-color: #222325;
+$body-bg: #fff;
+$light: #fff;
+$link-color: #005369;
+$link-hover-color: #191A1B;
+$darkbg-link-hover-color: #ececec;
+$link-decoration: none;
+$link-hover-decoration: none;
+$color_1: #3ebeb7;
+$color_1_dark: #349f99;
+$color_2: #222325;
+$color_3: #424242;
+$color_4: #7e7e7e;
+$color_5: #f9f9f9;
+$color_6: #f5f5f5;
+$color_7: #d2d2d2;
+$ad_bg_color: #dddddd;
+$gradient_start_color: #ffffff;
+$gradient_end_color: #f2f2f2;
+$vert_border_color: #ebebeb;
+$seperator_color: #ebebeb;
+$footer_bg_color: #191a1b;
+$footer_vert_border_color: #242627;
+$inactive_text_color: #c9c9c9;
+$superscript_color:#c3c3c3;
+$select_color: #f5f5f5;
+$trending_color: #0097ab;
+//social colors
+$facebook_color: hsla(222, 47%, 40%, 1); // #365397
+$twitter_color: hsla(198, 100%, 47%, 1); // #00a9f1
+$linkedin_color: hsla(203, 100%, 35%, 1); // #006db3
+$apple_color: hsla(0, 0%, 45%, 1); // #737373
+$google_color: hsla(217, 89%, 61%, 1); // #4285f4
+$google_plus_color: hsla(8, 74%, 53%, 1); // #e0452c
+$youtube_color: hsla(0, 100%, 60%, 1); // #ff3333
+$vimeo_color: hsla(200, 82%, 61%, 1); // #48b6ed
+$pinterest_color: hsla(0, 78%, 45%, 1); // #ce1a19
+$yelp_color: hsla(5, 100%, 38%, 1); // #c30f00
+$dribbble_color: hsla(338, 82%, 60%, 1); // #ed4584
+$amazon_color: hsla(36, 100%, 50%, 1); // #ff9700
+$ebay_color: hsla(219, 89%, 30%, 1); // #083790
+$skype_color: hsla(198, 100%, 48%, 1); // #00acf4
+$instagram_color: hsla(208, 46%, 41%, 1); // #396d9a
+$dropbox_color: hsla(206, 89%, 46%, 1); // #0d84de
+$flickr_color: hsla(334, 100%, 46%, 1); // #ea0066
+$github_color: hsla(0, 0%, 18%, 1); // #2f2f2f
+$basecamp_color: hsla(121, 38%, 58%, 1); // #6bbd6d
+$tumblr_color: hsla(210, 37%, 30%, 1); // #304c68
+$foursquare_color: hsla(206, 72%, 45%, 1); // #207dc5
+$box_color: hsla(204, 83%, 40%, 1); // #1277bc
+
+//transitions
+$cubic: all .6s cubic-bezier(.19,1,.22,1) 50ms;
+$cubic-fast: all .3s cubic-bezier(.19,1,.22,1) 50ms;
+$cubic-slow: all 1.5s cubic-bezier(.19,1,.22,1) 50ms;
+$ease: all .6s ease-in-out;
+$page_transition: all .150s ease-in-out;
+
+
+//Menu Variables
+$navbar_height: 64px;
