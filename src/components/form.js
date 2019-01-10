@@ -4,12 +4,12 @@ const uuid = require('uuid');
 //const moment = require('moment');
 
 const config = {
-  apiKey: 'AIzaSyDN1OE5ZvCa-v7AwzfK5bALAYXMXuOrNdU',
-  authDomain: 'montagekc-b4268.firebaseapp.com',
-  databaseURL: 'https://montagekc-b4268.firebaseio.com',
-  projectId: 'montagekc-b4268',
-  storageBucket: 'montagekc-b4268.appspot.com',
-  messagingSenderId: '316642690142',
+  apiKey: 'AIzaSyBAmdpWSXQSk-V9M6B9avsf0jXA1n0ibdc',
+  authDomain: 'danieldomann-62011.firebaseapp.com',
+  databaseURL: 'https://danieldomann-62011.firebaseapp.com',
+  projectId: 'danieldomann-62011',
+  storageBucket: 'danieldomann-62011.appspot.com',
+  messagingSenderId: '403963476273',
 };
 
 
