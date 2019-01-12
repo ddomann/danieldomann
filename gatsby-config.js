@@ -5,7 +5,6 @@ module.exports = {
     author: 'Daniel Domann',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,6 +14,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,6 +31,12 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         precision: 8,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-64249844-3",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

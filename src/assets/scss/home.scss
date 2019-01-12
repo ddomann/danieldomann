@@ -13,12 +13,15 @@
   .img_wrap {
     text-align: center;
     margin-top: -1rem;
+    margin: auto;
+    max-width: 740px;
 
     @media (max-width: 575.98px) {
       margin: 0;
       position: absolute;
       bottom: 0;
       left: 0;
+      width: 100%;
     }
 
     .logo_img {
@@ -39,7 +42,7 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-    background-image: url('../img/konrads_montage.jpg');
+    //background-image: url('../../images/konrads_montage.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-attachment: scroll;
@@ -97,7 +100,7 @@
     display: inline-block;
     width: 100%;
     //height: calc(100vh - 50vh);
-    //max-height: 600px;
+    max-height: 300px;
     -ms-transition: height .6s ease-in-out;
     -webkit-transition: height .6s ease-in-out;
     -moz-transition: height .6s ease-in-out;
@@ -105,7 +108,7 @@
     transition: height .6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    overflow: hidden;
+    overflow: auto;
     height: auto;
 
     @media (max-width: 575.98px) {

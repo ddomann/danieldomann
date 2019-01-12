@@ -6,7 +6,7 @@ const uuid = require('uuid');
 const config = {
   apiKey: 'AIzaSyBAmdpWSXQSk-V9M6B9avsf0jXA1n0ibdc',
   authDomain: 'danieldomann-62011.firebaseapp.com',
-  databaseURL: 'https://danieldomann-62011.firebaseapp.com',
+  databaseURL: 'https://danieldomann-62011.firebaseio.com/',
   projectId: 'danieldomann-62011',
   storageBucket: 'danieldomann-62011.appspot.com',
   messagingSenderId: '403963476273',
@@ -31,14 +31,12 @@ class Contactform extends Component {
     firebase.initializeApp(config);
     firebase
     .database()
-    .ref(`Formdata/${this.state.uid}`)
-    .on('value', snap => console.log('from db', snap.val()));
+    .ref(`Formdata/${this.state.uid}`);
   }
 
   submitData(e) {
     const { name, email, message, subscribe} = this.state;
     const dateReceived = firebase.database.ServerValue.TIMESTAMP;
-    debugger;
     e.preventDefault();
     firebase
     .database()
@@ -49,8 +47,10 @@ class Contactform extends Component {
       message: message,
       subscribe: subscribe,
       dateReceived: dateReceived
+    }).then(() => {
+      alert("Party on dude!");
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log(error),alert("errr minor malfunction.. bummer dude :("));
     this.setState({
       name: '',
       email: '',
@@ -58,18 +58,6 @@ class Contactform extends Component {
       subscribe: false,
       uid: uuid.v1()
     });
-
-    fetch("https://openapi.band.us/v2.2/band/post/create", {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: new Headers({
-        'Content-Type': 'application/x-www-form-urlencoded',
-      }),
-      body: `access_token=ZQAAAYkkFaySxE3ErqCFL9F6GcvKT71bBXQbwZHgJMPlJlODyGbnlQZUi-i9a304ipg5EOILfOr30LRpvdn9DbjpzQRDFRXb10X29SxhUvap_4n2&band_key=AABkuzRfZnr5J3l6Pi2ynZ-v&content=${JSON.stringify(this.state)}`
-    })
-    .then(() => {
-      alert("Party on dude!");
-    })
   }
 
   inputData(e) {

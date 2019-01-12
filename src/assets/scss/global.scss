@@ -123,9 +123,9 @@ button:hover {
   background: transparent !important;
   outline: none;
   z-index: 1;
+  border: none;
 
   &:hover {
-    border: 1px solid transparent;
     color: #4bdaff !important;
   }
 

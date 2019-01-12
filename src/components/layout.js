@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-
 import '../assets/scss/scss/bootstrap.scss'
 import '../assets/scss/home.scss'
 import '../assets/scss/global.scss'
@@ -20,7 +19,8 @@ const Layout = ({ children }) => (
           }
         }
       }
-    `}
+  `
+  }
     render={data => (
       <>
         <div  className="global_wrapper">
