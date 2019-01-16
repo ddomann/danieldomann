@@ -103,14 +103,16 @@ export const pageQuery = graphql`
     montageLogo: file(relativePath: { eq: "montagelogo2_1.png" }) {
       childImageSharp {
         fluid(maxWidth: 740) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
+          presentationWidth
         }
       }
     },
     montageBG: file(relativePath: { eq: "konrads_montage.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid(maxWidth: 2500) {
           ...GatsbyImageSharpFluid_tracedSVG
+          presentationWidth
         }
       }
     }
